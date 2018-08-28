@@ -25,7 +25,8 @@ var apiProxy = proxy('/private-ethereum-prd', {
     proxyRes.headers['Access-Control-Allow-Headers'] = '*';
 },
 onProxyReq: function (proxyReq, req, res) {
-    proxyReq.setHeader('content-type', 'application/x-www-form-urlencoded;charset=utf-8;');
+    //proxyReq.setHeader('content-type', 'application/x-www-form-urlencoded;charset=utf-8;');
+    proxyReq.setHeader('content-type', 'application/json;charset=utf-8;');
     console.log('[DEBUG : onProxyReq]');
     console.log(proxyReq);
 }

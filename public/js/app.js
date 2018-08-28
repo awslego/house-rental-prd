@@ -36,7 +36,7 @@ App = {
     },
 
     initContract: function() {
-        $.getJSON('LeaseProperty.json', function(data) {
+        $.getJSON('../LeaseProperty.json', function(data) {
             // Get the necessary contract artifact file and instantiate it with truffle-contract
             var LeasePropertyArtifact = data;
             App.contracts.LeaseProperty = TruffleContract(LeasePropertyArtifact);
